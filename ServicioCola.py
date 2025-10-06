@@ -1,4 +1,4 @@
-# Clase Cola
+
 class Cola:
     def __init__(self):
         self.items = []
@@ -19,11 +19,11 @@ class Cola:
         return self.items
 
 
-# Clase principal del sistema de atención
+
 class SistemaSeguros:
     def __init__(self, num_servicios):
-        self.colas = [Cola() for _ in range(num_servicios)]  # Lista de colas
-        self.contadores = [1 for _ in range(num_servicios)]  # Contadores de turnos
+        self.colas = [Cola() for _ in range(num_servicios)]
+        self.contadores = [1 for _ in range(num_servicios)] 
 
     def llegada_cliente(self, servicio):
         numero_turno = f"S{servicio}-{self.contadores[servicio - 1]}"
@@ -44,7 +44,7 @@ class SistemaSeguros:
             print(f"Servicio {i}: {cola.mostrar()}")
 
 
-# Programa principal
+
 def main():
     print("=== SISTEMA DE COLAS - COMPAÑÍA DE SEGUROS ===")
     num_servicios = int(input("Ingrese el número de servicios disponibles: "))
@@ -84,7 +84,7 @@ def main():
             print("Comando no reconocido. Intente nuevamente.")
 
 
-# Ejecutar el programa
+
 if __name__ == "__main__":
     main()
 
